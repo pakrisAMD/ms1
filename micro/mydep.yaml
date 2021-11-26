@@ -15,20 +15,22 @@ spec:
         component: multi-container
     spec:
       containers:
-        - name: cmultiapp
-          image: tanzucodedept.azurecr.io/multiapp-partha:v1
-          imagePullPolicy: IfNotPresent
+      - name: cmultiapp
+        image: tanzucodedept.azurecr.io/multiapp-partha:v1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
       imagePullSecrets:
-        - name: acr-partha   
-          ports:
-            - containerPort: 80
-        - name: cmultiapi
-          image: tanzucodedept.azurecr.io/multiapi-partha:v1
-          imagePullPolicy: IfNotPresent
+      - name: acr-partha   
+          
+      - name: cmultiapi
+        image: tanzucodedept.azurecr.io/multiapi-partha:v1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 81
       imagePullSecrets:
-        - name: acr-partha
-          ports:
-            - containerPort: 81
-          env:
-            - name: ASPNETCORE_URLS
-              value: http://+:81
+      - name: acr-partha
+      
+        env:
+          - name: ASPNETCORE_URLS
+            value: http://+:81
