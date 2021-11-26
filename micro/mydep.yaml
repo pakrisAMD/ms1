@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: cmultiapp
-        image: parthatanzu.azurecr.io/multiapp-partha:v1
+        image: tanzucodedept.azurecr.io/multiapp-partha:v1
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
@@ -24,7 +24,7 @@ spec:
       - name: acr-partha   
           
       - name: cmultiapi
-        image: parthatanzu.azurecr.io/multiapi-partha:v1
+        image: tanzucodedept.azurecr.io/multiapi-partha:v1
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 81
