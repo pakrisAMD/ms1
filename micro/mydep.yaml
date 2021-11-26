@@ -19,14 +19,14 @@ spec:
           image: tanzucodedept.azurecr.io/multiapp-partha:v1
           imagePullPolicy: IfNotPresent
       imagePullSecrets:
-        - name: acr-parth   
+        - name: acr-partha   
           ports:
             - containerPort: 80
         - name: cmultiapi
           image: tanzucodedept.azurecr.io/multiapi-partha:v1
           imagePullPolicy: IfNotPresent
       imagePullSecrets:
-        - name: acr-parth
+        - name: acr-partha
           ports:
             - containerPort: 81
           env:
