@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: multi-container-dep
+  labels:
+    app: aspnet-core-multi-container-app
+spec:
+  replicas: 1
+  selector: 
+    matchLabels:
+      component: multi-container
+  template:
+    metadata: 
+      labels:
+        component: multi-container
+    spec:
+      containers:
+        - name: cmultiapp
+          image: multiapp
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+        - name: cmultiapi
+          image: multiapi
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 81
+          env:
+            - name: ASPNETCORE_URLS
+              value: http://+:81
