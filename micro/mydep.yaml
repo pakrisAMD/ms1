@@ -29,7 +29,4 @@ spec:
         ports:
         - containerPort: 81
       imagePullSecrets:
-      - name: acr-partha
-        env:
-          - name: ASPNETCORE_URLS
-            value: http://+:81
+      - name: acr-partha 
