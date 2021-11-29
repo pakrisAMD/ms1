@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: hello-dotnet
+  name: hello-dotnet
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: hello-dotnet
+  template:
+    metadata:
+      labels:kubectl 
+        run: hello-dotnet
+    spec:
+      containers:
+      - name: hello-dotnet
+        image: tanzucodedept.azurecr.io/hello-partha:v1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+        imagePullSecrets:
+      - name: acr-partha  
