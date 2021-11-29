@@ -15,7 +15,7 @@ spec:
         run: hello-dotnet
     spec:
       containers:
-      - name: hello-dotnet
+      - name: hellodotnet
         image: tanzucodedept.azurecr.io/hello-partha:v1
         imagePullPolicy: IfNotPresent
         ports:
