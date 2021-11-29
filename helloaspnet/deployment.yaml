@@ -11,7 +11,8 @@ spec:
       run: hello-dotnet
   template:
     metadata:
-      labels: 
+      labels: kubectl
+        run: hello-dotnet
     spec:
       containers:
       - name: hello-dotnet
