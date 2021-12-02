@@ -17,8 +17,8 @@ spec:
       containers:
       - name: hello-dotnet
         image: tanzucodedept.azurecr.io/hello-partha:v1
-        imagePullPolicy: IfNotPresent
+        #imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 8080
+        - containerPort: 80
       imagePullSecrets:
       - name: acr-partha  
