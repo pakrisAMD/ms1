@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: hello-dotnet
 spec:
-  ports:
+  ports: 
   - port: 80
     targetPort: 80
   selector:
