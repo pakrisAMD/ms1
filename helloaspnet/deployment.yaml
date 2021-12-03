@@ -19,6 +19,6 @@ spec:
         image: tanzucodedept.azurecr.io/hello-partha:v1
         #imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 80
+        - containerPort: 8119
       imagePullSecrets:
       - name: acr-partha  
