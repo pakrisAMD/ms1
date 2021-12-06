@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:  
-        run: hello-dotnet
+        app: hello-dotnet
     spec:
       containers:
       - image: tanzucodedept.azurecr.io/hello-partha:v1
