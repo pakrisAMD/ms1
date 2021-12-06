@@ -4,7 +4,7 @@ metadata:
   name: hello-dotnet
 spec:
   ports: 
-  - port: 80
+  - port: 89
     targetPort: 80
   selector:
     app: hello-dotnet
