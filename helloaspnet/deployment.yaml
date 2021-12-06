@@ -1,16 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  labels:
+    run: hello-dotnet
   name: hello-dotnet
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello-dotnet
+      run: hello-dotnet
   template:
     metadata:
       labels:  
-        app: hello-dotnet
+        run: hello-dotnet
     spec:
       containers:
       - image: tanzucodedept.azurecr.io/hello-partha:v1
